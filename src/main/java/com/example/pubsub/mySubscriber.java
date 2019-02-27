@@ -33,8 +33,6 @@ public class mySubscriber {
          String threadNum = args[1];
          ProjectSubscriptionName subscriptionName = ProjectSubscriptionName.of(PROJECT_ID, subscriptionID);
          Subscriber subscriber = null;
-
-
          //long startTime = System.nanoTime();
 
          try{
@@ -44,8 +42,8 @@ public class mySubscriber {
 
              while(true){
                  PubsubMessage msg = msgs.take();
-                 //System.out.println("Message ID: " + msg.getMessageId());
-                 System.out.println("Data: " + msg.getData().toStringUtf8());
+                 System.out.println("Message ID: " + msg.getMessageId());
+                 //System.out.println("Data: " + msg.getData().toStringUtf8());
                  //System.out.println(threadNum);
                  System.out.println(threadNum + " : " + counter++);
 
