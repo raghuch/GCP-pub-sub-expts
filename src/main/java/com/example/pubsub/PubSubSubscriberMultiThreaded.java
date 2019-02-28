@@ -24,10 +24,11 @@ class NewSubscriberRunnable implements Runnable {
 
 }
 
-public class NewSubscriberThreaded {
+public class PubSubSubscriberMultiThreaded {
 
     public static void main(String... args) {
         String subscriptionID = args[0];
+        System.out.println(System.getenv("GOOGLE_APPLICATION_CREDENTIALS"));
 
         ExecutorService executor = Executors.newFixedThreadPool(20);
         for(int i = 0; i < 20; i++) {
